@@ -24,6 +24,7 @@ import {
 } from "@ledgerhq/live-common/lib/account/helpers";
 
 import { flattenAccountsSelector } from "../../../reducers/accounts";
+import { localeSelector } from "../../../reducers/settings";
 import CurrencyUnitValue from "../../../components/CurrencyUnitValue";
 import LText from "../../../components/LText";
 import SectionSeparator from "../../../components/SectionSeparator";
@@ -56,6 +57,8 @@ const OperationDetails = ({ route }: Props) => {
     operation,
   } = swapOperation;
 
+  const locale = useSelector(localeSelector);
+  const locales = [locale, ...localeIds];
   const { colors } = useTheme();
   const accounts = useSelector(flattenAccountsSelector);
   const fromAccount = accounts.find(a => a.id === swapOperation.fromAccount.id);
@@ -141,7 +144,7 @@ const OperationDetails = ({ route }: Props) => {
             <Trans i18nKey={"transfer.swap.operationDetails.date"} />
           </LText>
           <LText style={styles.value}>
-            {operation.date.toLocaleDateString(localeIds, {
+            {operation.date.toLocaleDateString(locales, {
               year: "numeric",
               month: "long",
               day: "numeric",
