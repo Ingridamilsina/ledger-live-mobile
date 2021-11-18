@@ -2230,7 +2230,8 @@
       "summary": "Summary",
       "selectDevice": "Select device",
       "connectDevice": "Connect device",
-      "stepRange": "Step {{currentStep}} of {{totalSteps}}"
+      "stepRange": "Step {{currentStep}} of {{totalSteps}}",
+      "quantity": "Quantity"
     },
     "recipient": {
       "scan": "Scan QR code",

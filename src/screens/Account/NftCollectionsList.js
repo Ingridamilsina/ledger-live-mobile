@@ -19,7 +19,7 @@ import ReceiveIcon from "../../icons/Receive";
 import Button from "../../components/Button";
 import LText from "../../components/LText";
 
-const MAX_COLLECTIONS_TO_SHOW = 3;
+const MAX_COLLECTIONS_TO_SHOW = 2;
 
 const collectionKeyExtractor = o => o.contract;
 
