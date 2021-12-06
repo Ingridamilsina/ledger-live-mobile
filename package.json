@@ -166,7 +166,7 @@
     "redux": "4.1.1",
     "redux-actions": "2.6.5",
     "redux-thunk": "2.3.0",
-    "reselect": "4.0.0",
+    "reselect": "4.1.2",
     "rn-snoopy": "^2.0.2",
     "rxjs": "^6.6.6",
     "rxjs-compat": "^6.6.6",
